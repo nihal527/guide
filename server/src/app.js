@@ -6,12 +6,14 @@ const morgan = require('morgan')
 
 const app = express()
 app.use(morgan('combined'))
-app.unsubscribe(bodyParser.json())
+app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
+    console.log("req  : ", req);
+
     res.send({
-        message: "hello"
+        message: req.body.email + "Kullanıcı kaydedildi"
     })
 })
 

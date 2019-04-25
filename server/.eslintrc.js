@@ -20,6 +20,7 @@ module.exports = {
         "vue"
     ],
     "rules": {
+        "quotes": "off",
         "no-console": "off",
         "no-restricted-syntax": [
             "error",
