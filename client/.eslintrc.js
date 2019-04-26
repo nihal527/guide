@@ -21,10 +21,12 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "no-unused-vars": "off",
     "quotes": ["error", "double"],
     "quotes": 0,
     "quotes": [0],
     "quotes": ["off"],
+    "no-multiple-empty-lines": [2, { "max": 99999, "maxEOF": 0 }],
 
     "semi": 0,
     "space-before-function-paren": 0,

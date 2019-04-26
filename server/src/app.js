@@ -10,8 +10,6 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.post('/register', (req, res) => {
-    console.log("req  : ", req);
-
     res.send({
         message: req.body.email + "Kullanıcı kaydedildi"
     })
