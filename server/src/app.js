@@ -13,8 +13,8 @@ app.use(cors())
 require('./routes')(app)
 // app.listen(process.env.PORT || 8081)
 
-sequelize.sync().then(() => {
-    app.listen(config.port)
-    console.log('server started on port ' + config.port);
-
-})
+sequelize.sync()
+    .then(() => {
+        app.listen(config.port)
+        console.log(`Server started on port ${config.port}`)
+    })

@@ -2,13 +2,11 @@
 const { User } = require('../models')
 
 module.exports = {
-    // register(req, res) {
-    //     res.send({
-    //         message: "hello " + req.body.email
-    //     })
-    // }
+
     async register(req, res) {
         try {
+            console.log("burda");
+
             const user = await User.create(req.body)
             res.send(user.toJSON())
 
