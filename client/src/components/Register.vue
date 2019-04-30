@@ -1,5 +1,25 @@
 <template>
-  <div>
+  <v-layout row>
+    <v-flex xs6 offset-xs3>
+      <div class="white elevation-2">
+        <v-toolbar flat dense class="purple">
+          <v-toolbar-title>Register</v-toolbar-title>
+        </v-toolbar>
+        <div class="pl-4 pr-4 pt-2 pb-2">
+          <div>
+            <input type="email" v-model="email" name="email" placeholder="email">
+          </div>
+          <div>
+            <input type="password" v-model="password" name="password" placeholder="password">
+          </div>
+          <div class="error" v-html="error"></div>
+
+          <v-btn class="pink accent-1" @click="register">REGISTER</v-btn>
+        </div>
+      </div>
+    </v-flex>
+  </v-layout>
+  <!-- <div>
     <h1>Register page</h1>
     <div>
       <input type="email" v-model="email" name="email" placeholder="email">
@@ -10,7 +30,7 @@
     <div class="error" v-html="error"></div>
 
     <button @click="register">REGISTER</button>
-  </div>
+  </div>-->
 </template>
 
 <script>
@@ -54,5 +74,9 @@ export default {
 .error {
   color: red;
   margin: 16px;
+}
+.v-toolbar__title,
+.v-btn {
+  color: white;
 }
 </style>
