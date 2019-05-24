@@ -5,32 +5,19 @@
         <v-toolbar flat dense class="purple">
           <v-toolbar-title>Register</v-toolbar-title>
         </v-toolbar>
-        <div class="pl-4 pr-4 pt-2 pb-2">
-          <div>
-            <input type="email" v-model="email" name="email" placeholder="email">
-          </div>
-          <div>
-            <input type="password" v-model="password" name="password" placeholder="password">
-          </div>
+        <div class="pl-4 pr-4 pt-4 pb-4">
+          <v-text-field v-model="email" label="Email"></v-text-field>
+
+          <br>
+          <v-text-field v-model="password" label="Password"></v-text-field>
+
           <div class="error" v-html="error"></div>
 
-          <v-btn class="pink accent-1" @click="register">REGISTER</v-btn>
+          <v-btn dark class="pink accent-1" @click="register">REGISTER</v-btn>
         </div>
       </div>
     </v-flex>
   </v-layout>
-  <!-- <div>
-    <h1>Register page</h1>
-    <div>
-      <input type="email" v-model="email" name="email" placeholder="email">
-    </div>
-    <div>
-      <input type="password" v-model="password" name="password" placeholder="password">
-    </div>
-    <div class="error" v-html="error"></div>
-
-    <button @click="register">REGISTER</button>
-  </div>-->
 </template>
 
 <script>
@@ -71,11 +58,9 @@ export default {
 
 
 <style scoped>
-.error {
-  color: red;
-  margin: 16px;
-}
-.v-toolbar__title,
+/* .input-group--text-field input {
+  border-bottom: 1px solid black;
+} */
 .v-btn {
   color: white;
 }

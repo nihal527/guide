@@ -1,3 +1,3 @@
-#serve 
+#server 
 
 npm start
